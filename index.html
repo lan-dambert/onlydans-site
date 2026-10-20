@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OnlyDans — the most unnecessarily organized club for people named Dan</title>
+<meta name="description" content="OnlyDans is the most unnecessarily organized club for people named Dan. Weekly Dan of the Week, nominations, hats. By Dans, for Dans.">
+<style>
+  :root { --ink:#111; --paper:#faf8f4; --accent:#1a56db; --muted:#666; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--paper); color:var(--ink); line-height:1.6; }
+  .wrap { max-width:640px; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
+  .hero { text-align:center; padding:3rem 0 2rem; }
+  .hero-visual { width:120px; height:120px; margin:0 auto 1.5rem; border:3px dashed var(--muted); border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:2.5rem; }
+  h1 { font-size:2rem; line-height:1.25; margin-bottom:.5rem; }
+  .tagline { color:var(--muted); font-size:1.05rem; }
+  .bullets { margin:2rem 0; padding:0; list-style:none; }
+  .bullets li { padding:.75rem 0 .75rem 2rem; position:relative; border-top:1px solid #e5e0d5; }
+  .bullets li:last-child { border-bottom:1px solid #e5e0d5; }
+  .bullets li::before { content:"▸"; position:absolute; left:.25rem; color:var(--accent); font-weight:bold; }
+  .signup { background:#fff; border:1px solid #e5e0d5; border-radius:12px; padding:1.75rem; margin:2rem 0; }
+  .signup h2 { font-size:1.25rem; margin-bottom:1rem; }
+  .field { margin-bottom:1rem; }
+  .field label { display:block; font-weight:600; font-size:.9rem; margin-bottom:.3rem; }
+  .field input[type=text], .field input[type=email] { width:100%; padding:.65rem .75rem; border:1px solid #ccc; border-radius:8px; font-size:1rem; }
+  .radio-row { display:flex; gap:1.25rem; margin:.25rem 0 .25rem; }
+  .radio-row label { font-weight:400; display:flex; align-items:center; gap:.4rem; }
+  .consent { display:flex; gap:.5rem; align-items:flex-start; font-size:.9rem; color:var(--muted); margin:1rem 0; }
+  .consent input { margin-top:.3rem; }
+  button { width:100%; padding:.85rem; background:var(--ink); color:#fff; border:none; border-radius:8px; font-size:1.05rem; font-weight:700; cursor:pointer; }
+  button:hover { background:#333; }
+  .friend-note { font-size:.92rem; color:var(--muted); margin-top:1rem; text-align:center; }
+  .proof { text-align:center; margin:2rem 0; color:var(--muted); font-size:.95rem; }
+  .proof a { color:var(--accent); }
+  footer { text-align:center; color:var(--muted); font-size:.85rem; padding-top:2rem; border-top:1px solid #e5e0d5; }
+  footer a { color:var(--accent); }
+  .todo { background:#fff8e1; border:1px dashed #c9a227; border-radius:8px; padding:.75rem 1rem; font-size:.85rem; margin:1rem 0; color:#5c4a00; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="hero">
+    <!-- TODO (visual): original hero visual. Do NOT use the lock-D logo until trademark counsel clears it. -->
+    <div class="hero-visual" aria-hidden="true">🎩</div>
+    <h1>OnlyDans is the most unnecessarily organized club for people named Dan.</h1>
+    <p class="tagline">A joke taken seriously. By Dans, for Dans.</p>
+  </section>
+
+  <ul class="bullets">
+    <li><strong>What it is:</strong> a club with one membership requirement — your name is Dan.</li>
+    <li><strong>Who it's for:</strong> Dans everywhere (and the friends of Dans who nominate them).</li>
+    <li><strong>What happens:</strong> a weekly Dan of the Week, nominations, dubious Dan statistics, and eventually hats.</li>
+  </ul>
+
+  <section class="signup" id="signup">
+    <h2>Join the founding cohort</h2>
+    <!-- TODO (backend): wire form action to the real signup endpoint + shared inbox. No backend yet — do not publish. -->
+    <form action="TODO_SIGNUP_ENDPOINT" method="POST" onsubmit="return false;">
+      <div class="field">
+        <div class="radio-row" role="radiogroup" aria-label="I am">
+          <label><input type="radio" name="type" value="dan" checked> I'm a Dan</label>
+          <label><input type="radio" name="type" value="friend"> I'm a friend of a Dan</label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="city">City <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+        <input type="text" id="city" name="city" autocomplete="address-level2">
+      </div>
+      <div class="consent">
+        <input type="checkbox" id="consent" name="consent">
+        <label for="consent">Yes, email me OnlyDans updates. (Unchecked by default — your inbox, your rules.)</label>
+      </div>
+      <button type="submit" disabled style="opacity:.55;cursor:not-allowed;">Claim my Dan number — opening soon</button>
+      <p class="friend-note">Signups aren't open yet — follow <a href="https://www.instagram.com/onlydansclub" target="_blank" rel="noopener">@onlydansclub</a> for the launch. Friends of Dans nominate, recruit, and buy hats. The Dans do the rest.</p>
+    </form>
+  </section>
+
+  <section class="proof">
+    <p>Founding Dans so far: <strong>3</strong> — the cohort is forming now.</p>
+    <p>Follow the bit: <a href="https://www.instagram.com/onlydansclub" target="_blank" rel="noopener">@onlydansclub</a> on Instagram</p>
+    <!-- Numbers above must be REAL. Update the count only from the actual signup list. -->
+  </section>
+
+  <footer>
+    <p><a href="https://www.instagram.com/onlydansclub" target="_blank" rel="noopener">@onlydansclub</a><!-- TODO (contact): add the shared brand email here once onlydansclub@gmail.com is created --></p>
+    <p style="margin-top:.5rem;">OnlyDans — a joke taken seriously.</p>
+  </footer>
+
+</div>
+</body>
+</html>
